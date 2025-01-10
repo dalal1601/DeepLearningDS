@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruit Classifier</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7fc;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-size: 1.2rem;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input[type="file"] {
+            font-size: 1rem;
+            padding: 8px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .prediction-result {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .prediction-result p {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Fruit Classifier</h1>
+    </header>
+
+    <div class="container">
+        <form action="/predict" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="file">Upload an image of a fruit:</label>
+                <input type="file" name="file" id="file" required>
+            </div>
+            <button type="submit">Predict</button>
+        </form>
+
+        <!-- Prediction result will be displayed here -->
+        <div class="prediction-result" id="result">
+            <!-- Result will be shown after prediction -->
+        </div>
+    </div>
+
+    <script>
+        // Optional JavaScript to handle prediction result dynamically (if needed)
+        // You can use Fetch API to send the image and get the prediction result asynchronously
+    </script>
+</body>
+</html>
